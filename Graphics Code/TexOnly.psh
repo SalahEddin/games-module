@@ -1,0 +1,43 @@
+/**********************************************
+	TexOnly.psh
+
+	Pixel shader to draw basic textured pixels 
+***********************************************/
+
+//-----------------------------------------------------------------------------
+// Global variables
+//-----------------------------------------------------------------------------
+
+// Access to texture 0 + sampler
+Texture2D Texture; 
+SamplerState MeshTextureSampler;
+
+
+//-----------------------------------------------------------------------------
+// Input / output structures
+//-----------------------------------------------------------------------------
+
+// Input to pixel shader
+struct PS_Input
+{
+	float4 ViewportPosition : SV_Position; // Viewport pixel position from vertex or geometry shader
+	float2 TexCoord         : TEXCOORD0;
+};
+
+// Output from pixel shader
+struct PS_Output
+{
+	float4 Colour : SV_Target; // Output to render target
+};
+
+
+//-----------------------------------------------------------------------------
+// Main function
+//-----------------------------------------------------------------------------
+
+// Main pixel shader function
+void main( in PS_Input i, out PS_Output o ) 
+{
+	// Output texture only
+	o.Colour = Texture.Sample( MeshTextureSampler, i.TexCoord );
+}

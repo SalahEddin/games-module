@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{35B4805C-0DFE-46EC-B523-FDA4DB47BDA8}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>ParticleTool</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Graphics Code;Graphics Code\Import;Graphics Code\Import\Math;Graphics Code\Import\Common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>User32.lib;d3d10.lib;d3dx10d.lib;d3dx9d.lib;dxguid.lib;winmm.lib</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>Graphics Code;Graphics Code\Import;Graphics Code\Import\Math;Graphics Code\Import\Common</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>User32.lib;d3d10.lib;d3dx10.lib;d3dx9.lib;dxguid.lib;winmm.lib</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>Main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Graphics Code\Camera.cpp" />
+    <ClCompile Include="Graphics Code\CTimer.cpp" />
+    <ClCompile Include="Graphics Code\DX10Particles.cpp" />
+    <ClCompile Include="Graphics Code\Import\CImportXFile.cpp" />
+    <ClCompile Include="Graphics Code\Import\Common\CFatalException.cpp" />
+    <ClCompile Include="Graphics Code\Import\Common\MSDefines.cpp" />
+    <ClCompile Include="Graphics Code\Import\Common\Utility.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\BaseMath.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\CMatrix2x2.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\CMatrix3x3.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\CMatrix4x4.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\CQuaternion.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\CQuatTransform.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\CVector2.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\CVector3.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\CVector4.cpp" />
+    <ClCompile Include="Graphics Code\Import\Math\MathIO.cpp" />
+    <ClCompile Include="Graphics Code\Input.cpp" />
+    <ClCompile Include="Graphics Code\Model.cpp" />
+    <ClCompile Include="Graphics Code\Shader.cpp" />
+    <ClCompile Include="ParticleForm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graphics Code\Camera.h" />
+    <ClInclude Include="Graphics Code\CTimer.h" />
+    <ClInclude Include="Graphics Code\Defines.h" />
+    <ClInclude Include="Graphics Code\Import\CImportXFile.h" />
+    <ClInclude Include="Graphics Code\Import\Colour.h" />
+    <ClInclude Include="Graphics Code\Import\Common\CFatalException.h" />
+    <ClInclude Include="Graphics Code\Import\Common\Defines.h" />
+    <ClInclude Include="Graphics Code\Import\Common\Error.h" />
+    <ClInclude Include="Graphics Code\Import\Common\MSDefines.h" />
+    <ClInclude Include="Graphics Code\Import\Common\Utility.h" />
+    <ClInclude Include="Graphics Code\Import\Math\BaseMath.h" />
+    <ClInclude Include="Graphics Code\Import\Math\CMatrix2x2.h" />
+    <ClInclude Include="Graphics Code\Import\Math\CMatrix3x3.h" />
+    <ClInclude Include="Graphics Code\Import\Math\CMatrix4x4.h" />
+    <ClInclude Include="Graphics Code\Import\Math\CQuaternion.h" />
+    <ClInclude Include="Graphics Code\Import\Math\CQuatTransform.h" />
+    <ClInclude Include="Graphics Code\Import\Math\CVector2.h" />
+    <ClInclude Include="Graphics Code\Import\Math\CVector3.h" />
+    <ClInclude Include="Graphics Code\Import\Math\CVector4.h" />
+    <ClInclude Include="Graphics Code\Import\Math\MathDX.h" />
+    <ClInclude Include="Graphics Code\Import\Math\MathIO.h" />
+    <ClInclude Include="Graphics Code\Import\MeshData.h" />
+    <ClInclude Include="Graphics Code\Input.h" />
+    <ClInclude Include="Graphics Code\Model.h" />
+    <ClInclude Include="Graphics Code\Resource.h" />
+    <ClInclude Include="Graphics Code\Shader.h" />
+    <ClInclude Include="ParticleForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ParticleForm.resx">
+      <DependentUpon>ParticleForm.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

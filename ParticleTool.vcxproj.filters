@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Windows UI">
+      <UniqueIdentifier>{26997fe0-da8f-4f83-b754-cef605688e14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows UI\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Windows UI\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Windows UI\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Graphics Code">
+      <UniqueIdentifier>{cfe1db05-0f54-45a8-9499-24f994928d6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics Code\Import">
+      <UniqueIdentifier>{deedbdb8-2e4b-4340-9cde-5809fb4a8a12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics Code\Import\Math">
+      <UniqueIdentifier>{647dc121-0871-47f3-87ad-3ed71bac1c68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics Code\Import\Common">
+      <UniqueIdentifier>{4032143a-db34-4898-98fb-4db6ac8857fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ParticleForm.cpp">
+      <Filter>Windows UI\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Common\CFatalException.cpp">
+      <Filter>Graphics Code\Import\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Common\MSDefines.cpp">
+      <Filter>Graphics Code\Import\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Common\Utility.cpp">
+      <Filter>Graphics Code\Import\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\BaseMath.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\CMatrix2x2.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\CMatrix3x3.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\CMatrix4x4.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\CQuaternion.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\CQuatTransform.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\CVector2.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\CVector3.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\CVector4.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\Math\MathIO.cpp">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Import\CImportXFile.cpp">
+      <Filter>Graphics Code\Import</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Camera.cpp">
+      <Filter>Graphics Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\CTimer.cpp">
+      <Filter>Graphics Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\DX10Particles.cpp">
+      <Filter>Graphics Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Input.cpp">
+      <Filter>Graphics Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Model.cpp">
+      <Filter>Graphics Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics Code\Shader.cpp">
+      <Filter>Graphics Code</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ParticleForm.h">
+      <Filter>Windows UI\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Common\CFatalException.h">
+      <Filter>Graphics Code\Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Common\Defines.h">
+      <Filter>Graphics Code\Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Common\Error.h">
+      <Filter>Graphics Code\Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Common\MSDefines.h">
+      <Filter>Graphics Code\Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Common\Utility.h">
+      <Filter>Graphics Code\Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\BaseMath.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\CMatrix2x2.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\CMatrix3x3.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\CMatrix4x4.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\CQuaternion.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\CQuatTransform.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\CVector2.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\CVector3.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\CVector4.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\MathDX.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Math\MathIO.h">
+      <Filter>Graphics Code\Import\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\CImportXFile.h">
+      <Filter>Graphics Code\Import</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\Colour.h">
+      <Filter>Graphics Code\Import</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Import\MeshData.h">
+      <Filter>Graphics Code\Import</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Camera.h">
+      <Filter>Graphics Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\CTimer.h">
+      <Filter>Graphics Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Defines.h">
+      <Filter>Graphics Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Input.h">
+      <Filter>Graphics Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Model.h">
+      <Filter>Graphics Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Resource.h">
+      <Filter>Graphics Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics Code\Shader.h">
+      <Filter>Graphics Code</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ParticleForm.resx">
+      <Filter>Windows UI\Resource Files</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,123 @@
+/**********************************************
+	PixelLitTex.psh
+
+	Pixel shader to calculate lighting for each
+	pixel and blend it with a texture. Assume
+	we have world position and normal for the
+	pixel (interpolated) from the vertex shader 
+***********************************************/
+
+//-----------------------------------------------------------------------------
+// Global variables
+//-----------------------------------------------------------------------------
+
+// When using constant buffers in DX10 (see RenderScene in main code), all global shader variables
+// must be collected together into cbuffer structures (the name, cb0, is not important)
+cbuffer cb0
+{
+// Current lighting information - ambient + two point lights
+float4 AmbientColour;
+float4 Light1Position;   // Point light 1 - position
+float4 Light1Colour;     // Point light 1 - colour
+float  Light1Brightness; // Point light 1 - brightness
+float4 Light2Position;   // Point light 2...
+float4 Light2Colour;
+float  Light2Brightness;
+
+// Shininess of material and camera position needed for specular calculation
+float4 CameraPosition;
+float SpecularPower;
+};
+
+// Access to texture 0
+// DX10 seperates textures and "samplers". A texture is a block of pixel data as you would expect.
+// A sampler is a set of states determining how to filter texture pixels (e.g. trilinear filtering)
+// We must have at least one sampler to access our texture. In this example it is set up in D3DSetup
+// to use trilinear filtering and texture wrapping mode
+Texture2D Texture; 
+SamplerState MeshTextureSampler;
+
+
+//-----------------------------------------------------------------------------
+// Input / output structures
+//-----------------------------------------------------------------------------
+
+// Input to pixel shader
+struct PS_Input
+{
+	float4 ViewportPosition : SV_Position; // Viewport pixel position from vertex or geometry shader
+	float3 WorldPosition    : TEXCOORD0;   // The world position of the pixel
+	float3 WorldNormal      : TEXCOORD1;   // The world normal of the pixel
+	float2 TexCoord         : TEXCOORD2;
+};
+
+// Output from pixel shader
+struct PS_Output
+{
+	float4 Colour : SV_Target; // New semantics for DX10 - output to render target -replaces COLOR semantic in DX9
+};
+
+
+//-----------------------------------------------------------------------------
+// Main function
+//-----------------------------------------------------------------------------
+
+// Main pixel shader function
+void main( in PS_Input i, out PS_Output o ) 
+{
+	// Renormalise world normal for the pixel as it has been interpolated from the vertex world normals & may not be length 1
+	float3 WorldNormal = normalize( i.WorldNormal );
+
+	////////////////////////
+	// Lighting preparation
+
+	// Get normalised vector to camera for specular equation (common for all lights)
+	float3 CameraDir = normalize( CameraPosition - i.WorldPosition );
+
+	// Accumulate diffuse and specular colour effect from each light
+	float3 TotalDiffuseColour = AmbientColour;
+	float3 TotalSpecularColour = 0;
+
+
+	////////////////////////
+	// First light
+
+	// Calculate diffuse lighting from the 1st light. Standard equation: Diffuse = light colour * max(0, N.L)
+	float3 LightDir = Light1Position - i.WorldPosition;
+	float LightDist = length( LightDir );
+	float LightStrength = saturate( Light1Brightness / LightDist );
+	LightDir /= LightDist;
+	float3 DiffuseColour = LightStrength * Light1Colour * saturate( dot( WorldNormal, LightDir ) );
+	TotalDiffuseColour += DiffuseColour;
+
+	// Calculate specular lighting from the 1st light. Standard equation: Specular = light colour * max(0, (N.H)^p)
+	// Slight tweak here: multiply by diffuse colour rather than light colour
+	float3 Halfway = normalize( CameraDir + LightDir );
+	TotalSpecularColour += DiffuseColour * saturate( pow( dot( WorldNormal, Halfway ), SpecularPower ) );
+
+	////////////////////////
+	// Second light
+
+	// Calculate diffuse lighting from the 2nd light
+	LightDir = Light2Position - i.WorldPosition;
+	LightDist = length( LightDir );
+	LightStrength = saturate( Light2Brightness / LightDist );
+	LightDir /= LightDist;
+	DiffuseColour = LightStrength * Light2Colour * saturate( dot( WorldNormal, LightDir ) );
+	TotalDiffuseColour += DiffuseColour;
+
+	// Calculate specular lighting from the 2nd light
+	Halfway = normalize( CameraDir + LightDir );
+	TotalSpecularColour += DiffuseColour * saturate( pow( dot( WorldNormal, Halfway ), SpecularPower ) );
+
+
+	////////////////////////
+	// Final blending
+
+	// Combine lighting colours with texture - alpha channel of texture is a specular map
+	float4 TextureColour = Texture.Sample( MeshTextureSampler, i.TexCoord );
+	o.Colour.rgb = TotalDiffuseColour * TextureColour.rgb + TotalSpecularColour * TextureColour.a; 
+
+	// Set alpha blending to 1 (no alpha available in texture)
+	o.Colour.a = 1.0f;
+}

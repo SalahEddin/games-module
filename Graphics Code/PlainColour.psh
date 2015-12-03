@@ -1,0 +1,46 @@
+/**********************************************
+	PlainColour.psh
+
+	Simple pixel shader that sets all pixels to
+	a single colour - no lighting or textures
+***********************************************/
+
+//-----------------------------------------------------------------------------
+// Global variables
+//-----------------------------------------------------------------------------
+
+// When using constant buffers in DX10 (see RenderScene in main code), all global shader variables
+// must be collected together into cbuffer structures (the name, cb0, is not important)
+cbuffer cb0
+{
+// All pixels output in this colour
+float4 Colour;
+};
+
+//-----------------------------------------------------------------------------
+// Input / output structures
+//-----------------------------------------------------------------------------
+
+// Input to Pixel Shader
+struct PS_Input
+{
+	float4 Position : SV_Position; // New semantics for DX10 - pixel position from vertex shader - not used in DX9
+};
+
+// Output from Pixel Shader
+struct PS_Output
+{
+	float4 Colour : SV_Target; // New semantics for DX10 - output to render target -replaces COLOR semantic in DX9
+};
+
+
+//-----------------------------------------------------------------------------
+// Main function
+//-----------------------------------------------------------------------------
+
+// Main pixel shader function - just copy constant colour to pixels with fixed alpha
+void main( in PS_Input i, out PS_Output o ) 
+{
+	o.Colour.rgb = Colour;
+	o.Colour.a = 1.0f;
+}
