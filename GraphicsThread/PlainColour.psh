@@ -1,0 +1,42 @@
+/**********************************************
+	PlainColour.psh
+
+	Simple pixel shader that sets all pixels to
+	a single colour - no lighting or textures
+***********************************************/
+
+//-----------------------------------------------------------------------------
+// Global variables
+//-----------------------------------------------------------------------------
+
+// All pixels output in this colour
+float3 MaterialColour;
+
+
+//-----------------------------------------------------------------------------
+// Input / output structures
+//-----------------------------------------------------------------------------
+
+// Input to Pixel Shader
+struct PS_Input
+{
+	// No input needed
+};
+
+// Output from Pixel Shader
+struct PS_Output
+{
+	float4 Colour : COLOR0;
+};
+
+
+//-----------------------------------------------------------------------------
+// Main function
+//-----------------------------------------------------------------------------
+
+// Main pixel shader function - just copy constant colour to pixels with fixed alpha;
+void main( in PS_Input i, out PS_Output o ) 
+{
+    o.Colour.rgb = MaterialColour;
+    o.Colour.a = 1.0f;
+}

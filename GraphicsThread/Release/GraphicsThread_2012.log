@@ -1,0 +1,57 @@
+﻿Build started 12/2/2015 12:41:02 PM.
+     1>Project "C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread_2012.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IImport /IImport\Common /IImport\Math /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0710 /D _MBCS /GF /Gm- /EHsc /MT /GS- /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /wd4996 /analyze- /errorReport:prompt Import\CImportXFile.cpp Import\Math\BaseMath.cpp Import\Math\CMatrix2x2.cpp Import\Math\CMatrix3x3.cpp Import\Math\CMatrix4x4.cpp Import\Math\CQuaternion.cpp Import\Math\CQuatTransform.cpp Import\Math\CVector2.cpp Import\Math\CVector3.cpp Import\Math\CVector4.cpp Import\Math\MathIO.cpp Import\Common\CFatalException.cpp Import\Common\MSDefines.cpp Import\Common\Utility.cpp Camera.cpp GraphicsThread.cpp Input.cpp Model.cpp Shader.cpp
+         CImportXFile.cpp
+         BaseMath.cpp
+         CMatrix2x2.cpp
+         CMatrix3x3.cpp
+         CMatrix4x4.cpp
+         CQuaternion.cpp
+         CQuatTransform.cpp
+         CVector2.cpp
+         CVector3.cpp
+         CVector4.cpp
+         MathIO.cpp
+         CFatalException.cpp
+         MSDefines.cpp
+         Utility.cpp
+         Camera.cpp
+         GraphicsThread.cpp
+     1>GraphicsThread.cpp(75): warning C4316: 'CModel': object allocated on the heap may not be aligned 16
+     1>GraphicsThread.cpp(384): warning C4316: 'CCamera': object allocated on the heap may not be aligned 16
+     1>GraphicsThread.cpp(389): warning C4316: 'CModel': object allocated on the heap may not be aligned 16
+     1>GraphicsThread.cpp(390): warning C4316: 'CModel': object allocated on the heap may not be aligned 16
+         Input.cpp
+         Model.cpp
+         Shader.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _VC80_UPGRADE=0x0710 /l"0x0409" /nologo /fo"Release\GraphicsThread.res" GraphicsThread.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread.exe" /INCREMENTAL:NO /NOLOGO d3dxof.lib dxguid.lib d3dx9.lib d3d9.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread.lib" /MACHINE:X86 /SAFESEH /IGNORE:4089 Release\GraphicsThread.res
+         Release\CImportXFile.obj
+         Release\BaseMath.obj
+         Release\CMatrix2x2.obj
+         Release\CMatrix3x3.obj
+         Release\CMatrix4x4.obj
+         Release\CQuaternion.obj
+         Release\CQuatTransform.obj
+         Release\CVector2.obj
+         Release\CVector3.obj
+         Release\CVector4.obj
+         Release\MathIO.obj
+         Release\CFatalException.obj
+         Release\MSDefines.obj
+         Release\Utility.obj
+         Release\Camera.obj
+         Release\GraphicsThread.obj
+         Release\Input.obj
+         Release\Model.obj
+         Release\Shader.obj
+         GraphicsThread_2012.vcxproj -> C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread.exe
+     1>Done Building Project "C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread_2012.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:22.25

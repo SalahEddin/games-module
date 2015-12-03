@@ -1,0 +1,37 @@
+﻿Build started 12/3/2015 10:36:34 AM.
+     1>Project "C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread_2012.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IImport /IImport\Common /IImport\Math /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /wd4996 /analyze- /errorReport:prompt GraphicsThread.cpp
+         GraphicsThread.cpp
+     1>c:\users\user2\desktop\concurrency\graphicsthread\graphicsthread.cpp(79): warning C4316: 'CModel': object allocated on the heap may not be aligned 16
+     1>c:\users\user2\desktop\concurrency\graphicsthread\graphicsthread.cpp(405): warning C4316: 'CCamera': object allocated on the heap may not be aligned 16
+     1>c:\users\user2\desktop\concurrency\graphicsthread\graphicsthread.cpp(410): warning C4316: 'CModel': object allocated on the heap may not be aligned 16
+     1>c:\users\user2\desktop\concurrency\graphicsthread\graphicsthread.cpp(411): warning C4316: 'CModel': object allocated on the heap may not be aligned 16
+     1>c:\users\user2\desktop\concurrency\graphicsthread\graphicsthread.cpp(458): warning C4305: 'return': truncation from 'int' to 'bool'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread.exe" /INCREMENTAL /NOLOGO d3dxof.lib dxguid.lib d3dx9d.lib d3d9.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread.lib" /MACHINE:X86 /SAFESEH:NO /IGNORE:4089 Debug\GraphicsThread.res
+         Debug\CImportXFile.obj
+         Debug\BaseMath.obj
+         Debug\CMatrix2x2.obj
+         Debug\CMatrix3x3.obj
+         Debug\CMatrix4x4.obj
+         Debug\CQuaternion.obj
+         Debug\CQuatTransform.obj
+         Debug\CVector2.obj
+         Debug\CVector3.obj
+         Debug\CVector4.obj
+         Debug\MathIO.obj
+         Debug\CFatalException.obj
+         Debug\MSDefines.obj
+         Debug\Utility.obj
+         Debug\Camera.obj
+         Debug\GraphicsThread.obj
+         Debug\Input.obj
+         Debug\Model.obj
+         Debug\Shader.obj
+         GraphicsThread_2012.vcxproj -> C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread.exe
+     1>Done Building Project "C:\Users\User2\Desktop\Concurrency\GraphicsThread\GraphicsThread_2012.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.46

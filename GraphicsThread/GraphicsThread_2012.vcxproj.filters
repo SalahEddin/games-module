@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{ddc00b85-0f19-45d4-b3c3-6eacef5dbd22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Import">
+      <UniqueIdentifier>{acafac2e-9016-4da6-b2a3-849aa40f5c59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Import\Maths">
+      <UniqueIdentifier>{7ade11ca-69d2-4cfb-b02c-79127b24a220}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Import\Common">
+      <UniqueIdentifier>{ed92b78a-7c83-41ef-be35-18e5a55f2eac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{450d2e26-c5b2-45ef-84e7-4dfee7984c5a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GraphicsThread.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\CImportXFile.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Colour.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\MeshData.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\BaseMath.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\CMatrix2x2.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\CMatrix3x3.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\CMatrix4x4.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\CQuaternion.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\CQuatTransform.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\CVector2.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\CVector3.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\CVector4.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\MathDX.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Math\MathIO.h">
+      <Filter>Import\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Common\CFatalException.h">
+      <Filter>Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Common\Defines.h">
+      <Filter>Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Common\Error.h">
+      <Filter>Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Common\MSDefines.h">
+      <Filter>Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Import\Common\Utility.h">
+      <Filter>Import\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Defines.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TL.ico">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="PixelLit2Tex.psh">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="PixelLitTex.vsh">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="PlainColour.psh">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="XformOnly.vsh">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Import\CImportXFile.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\BaseMath.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\CMatrix2x2.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\CMatrix3x3.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\CMatrix4x4.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\CQuaternion.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\CQuatTransform.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\CVector2.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\CVector3.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\CVector4.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Math\MathIO.cpp">
+      <Filter>Import\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Common\CFatalException.cpp">
+      <Filter>Import\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Common\MSDefines.cpp">
+      <Filter>Import\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Import\Common\Utility.cpp">
+      <Filter>Import\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="GraphicsThread.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Shader.cpp" />
+  </ItemGroup>
+</Project>
